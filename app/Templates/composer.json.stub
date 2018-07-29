@@ -1,0 +1,39 @@
+{
+    "name": "#VENDORNAME#/#PACKAGENAME#",
+    "type": "library",
+    "description": "",
+    "keywords": [
+        "laravel"
+    ],
+    "homepage": "http://www.placeholder.com",
+    "license": "",
+    "authors": [{
+            "name": "Place McHolder",
+            "email": "pholder@holder.com"
+    }],
+
+    "minimum-stability": "dev",
+    "require": {
+            "php": "^7.0"
+        },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "orchestra/testbench": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "#NAMESPACE#\\": "src/"
+            },
+            "classmap": [
+                "tests"
+            ]
+    },
+    "autoload-dev": {},
+    "extra": {
+        "laravel":{
+            "providers":[
+                "#NAMESPACE#\\#CLASSNAME#"
+            ]
+        }
+    }
+}
