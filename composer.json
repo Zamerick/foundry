@@ -1,24 +1,22 @@
 {
-  "name": "laravel-zero/laravel-zero",
-  "description": "The Laravel Zero Framework.",
+  "name": "zamerick/foundry",
+  "description": "A tool for using the laravel 'make' commands outside of laravel. Great for package creation.",
   "keywords": [
-    "framework",
+    "artisan",
     "laravel",
-    "console",
-    "zero",
     "cli"
   ],
-  "homepage": "http://laravel-zero.com",
+  "homepage": "https://github.com/Zamerick/foundry",
   "type": "project",
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-    "source": "https://github.com/laravel-zero/laravel-zero"
+    "issues": "https://github.com/Zamerick/foundry/issues",
+    "source": "https://github.com/Zamerick/foundry"
   },
   "authors": [
     {
-      "name": "Nuno Maduro",
-      "email": "enunomaduro@gmail.com"
+      "name": "Alex Oxthorn",
+      "email": "admin@alex-oxthorn.com"
     }
   ],
   "require": {
