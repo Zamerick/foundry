@@ -55,7 +55,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
         $stub = $stub ?? 'controller.plain.stub';
 
-        return template_path($stub);
+        return template_path('Controller' . DIRECTORY_SEPARATOR . $stub);
     }
 
     /**

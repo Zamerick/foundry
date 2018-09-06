@@ -113,10 +113,12 @@ class ModelMakeCommand extends GeneratorCommand
     protected function getStub()
     {
         if ($this->option('pivot')) {
-            return template_path('Model/pivot.model.stub');
+            $stub = 'pivot.model.stub';
+        } else {
+            $stub = 'model.stub';
         }
 
-        return template_path('Model/model.stub');
+        return template_path('Model' . DIRECTORY_SEPARATOR . $stub);
     }
 
     /**

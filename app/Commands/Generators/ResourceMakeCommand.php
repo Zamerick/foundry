@@ -50,9 +50,8 @@ class ResourceMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->collection()
-                    ? template_path('resource-collection.stub')
-                    : template_path('resource.stub');
+        $stub = $this->collection() ? 'resource-collection.stub' : 'resource.stub';
+        return template_path('Resource' . DIRECTORY_SEPARATOR . $stub);
     }
 
     /**
