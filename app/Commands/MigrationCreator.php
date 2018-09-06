@@ -67,7 +67,7 @@ class MigrationCreator
 
         $stub = $create ? 'create.stub' : 'update.stub';
 
-        return $this->files->get(template_path('Migration/' . "{$stub}"));
+        return $this->files->get(template_path('Migration' . DIRECTORY_SEPARATOR . "{$stub}"));
     }
 
     /**

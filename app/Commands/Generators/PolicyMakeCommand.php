@@ -112,9 +112,8 @@ class PolicyMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->option('model')
-                    ? template_path('policy.stub')
-                    : template_path('policy.plain.stub');
+        $stub = $this->option('model') ? 'policy.stub' : 'policy.plain.stub';
+        return template_path('Policy' . DIRECTORY_SEPARATOR . $stub);
     }
 
     /**

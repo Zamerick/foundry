@@ -35,9 +35,8 @@ class JobMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->option('sync')
-                        ? template_path('job.stub')
-                        : template_path('job-queued.stub');
+        $stub = $this->option('sync') ? 'job.stub' : 'job-queued.stub';
+        return template_path('Job' . DIRECTORY_SEPARATOR . $stub);
     }
 
     /**
