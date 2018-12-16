@@ -29,7 +29,8 @@ class PackageMakeCommand extends Command
             'vendorName' => ['target' => '#VENDORNAME#', 'payload' => strtolower(config('package.vendor'))],
             'packageName' => ['target' => '#PACKAGENAME#', 'payload' => $name],
             'className' => ['target' => '#CLASSNAME#', 'payload' => ucfirst($name) . 'ServiceProvider'],
-            'namespace' => ['target' => '#NAMESPACE#', 'payload' => ucfirst(config('package.vendor')) . '\\\\' . ucfirst($name)]
+            'namespace' => ['target' => '#NAMESPACE#', 'payload' => ucfirst(config('package.vendor')) . '\\' . ucfirst($name)],
+            'namespace' => ['target' => '#COMPOSERNAMESPACE#', 'payload' => ucfirst(config('package.vendor')) . '\\\\' . ucfirst($name)]
         ];
         $files = [
             [
