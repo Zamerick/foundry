@@ -11,7 +11,7 @@ return [
     | You cannot pass arguments to the default command because they are ignored.
     |
     */
-    'default' => App\Commands\SummaryCommand::class,
+    'default' => NunoMaduro\LaravelConsoleSummary\SummaryCommand::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,6 @@ return [
     */
     'hidden' => [
         NunoMaduro\LaravelConsoleSummary\SummaryCommand::class,
-        App\Commands\SummaryCommand::class,
         Symfony\Component\Console\Command\HelpCommand::class,
         Illuminate\Console\Scheduling\ScheduleRunCommand::class,
         Illuminate\Console\Scheduling\ScheduleFinishCommand::class,
@@ -59,9 +58,9 @@ return [
 
         // App Commands
         App\Commands\SetOption\SetVendorNameChangedCommand::class,
-        LaravelZero\Framework\Commands\App\Builder::class,
-        LaravelZero\Framework\Commands\App\Renamer::class,
-        LaravelZero\Framework\Commands\App\Installer::class,
+        LaravelZero\Framework\Commands\BuildCommand::class,
+        LaravelZero\Framework\Commands\RenameCommand::class,
+        LaravelZero\Framework\Commands\InstallCommand::class,
         App\Commands\Misc\OutputAllCommand::class
     ],
 
