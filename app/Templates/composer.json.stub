@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "#NAMESPACE#\\": "src/"
+            "#COMPOSERNAMESPACE#\\": "src/"
             },
             "classmap": [
                 "tests"
@@ -32,7 +32,7 @@
     "extra": {
         "laravel":{
             "providers":[
-                "#NAMESPACE#\\#CLASSNAME#"
+                "#COMPOSERNAMESPACE#\\#CLASSNAME#"
             ]
         }
     }
