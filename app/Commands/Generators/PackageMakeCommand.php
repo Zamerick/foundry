@@ -40,18 +40,28 @@ class PackageMakeCommand extends Command
             [
                 'message' => 'Creating basic service provider file...',
                 'stub' => 'provider.stub',
-                'filename' => $names['className']['payload'] . '.php'
+                'filename' => DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . $names['className']['payload'] . '.php'
             ]
         ];
 
         // Create package folder structure.
         $this->info('Creating top level package directory...');
         foreach ($directories as $directory) {
-            $path = $location . '/' . $names['packageName']['payload'] . $directory;
-            File::makeDirectory($path, 777, true, true);
+            $path = $location . DIRECTORY_SEPARATOR . $names['packageName']['payload'] . DIRECTORY_SEPARATOR . $directory;
+            File::makeDirectory($path, 0777, true, true);
         }
 
         // Create package files
-        Utility::createFiles($files, $names, $location, $this);
+        foreach ($files as $file) {
+            $this->info($file['message']);
+            $payload = File::get(template_path($file['stub']));
+            foreach ($names as $name) {
+                $payload = str_replace($name['target'], $name['payload'], $payload);
+            }
+            $path = $location
+                . DIRECTORY_SEPARATOR . $names['packageName']['payload']
+                . DIRECTORY_SEPARATOR . $file['filename'];
+            File::put($path, $payload);
+        }
     }
 }
