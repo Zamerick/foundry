@@ -12,13 +12,14 @@
             "email": "pholder@holder.com"
     }],
 
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
             "php": "^7.0"
         },
     "require-dev": {
-        "phpunit/phpunit": "*",
-        "orchestra/testbench": "*"
+        "phpunit/phpunit": "^7.5",
+        "orchestra/testbench": "^3.7",
+        "barryvdh/laravel-ide-helper": "^2.5"
     },
     "autoload": {
         "psr-4": {

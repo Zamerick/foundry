@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'enabled' => true,
+    'enabled' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'justification' => null,
+    'justification' => 'left',
 
     /*
     |--------------------------------------------------------------------------
@@ -67,6 +67,6 @@ return [
     |
     */
 
-    'rightToLeft' => null,
+    'rightToLeft' => "left-to-right",
 
 ];

@@ -42,6 +42,16 @@ class PackageMakeCommand extends Command
                 'message' => 'Creating basic service provider file...',
                 'stub' => 'provider.stub',
                 'filename' => DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . $names['className']['payload'] . '.php'
+            ],
+            [
+                'message' => 'Creating laravel gitignore file...',
+                'stub' => 'gitignore.stub',
+                'filename' => '.gitignore'
+            ],
+            [
+                'message' => 'Creating phpunit.xml file...',
+                'stub' => 'phpunit.stub',
+                'filename' => 'phpunit.xml'
             ]
         ];
 
