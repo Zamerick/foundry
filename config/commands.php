@@ -71,7 +71,7 @@ return [
     |
     | Do you have a service provider that loads a list of commands that
     | you don't need? No problem. Laravel Zero allows you to specify
-    | bellow a list of commands that you don't to see in your app.
+    | below a list of commands that you don't to see in your app.
     |
     */
     'remove' => [
