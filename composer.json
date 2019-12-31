@@ -21,7 +21,9 @@
   ],
   "require": {
     "php": "^7.2",
-    "laravel-zero/framework": "^6.0"
+    "laravel-zero/framework": "^6.0",
+    "padraic/phar-updater": "^1.0.6",
+    "zendframework/zend-text": "^2.7"
   },
   "require-dev": {
     "mockery/mockery": "^1.0",
